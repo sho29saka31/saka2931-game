@@ -5,9 +5,9 @@ import { useBest } from "../components/useBest";
 import { addRandom, type Board, type Dir, isOver, move, newGame } from "./logic";
 
 const COLORS: Record<number, string> = {
-  0: "bg-slate-700", 2: "bg-amber-100 text-slate-800", 4: "bg-amber-200 text-slate-800", 8: "bg-orange-300 text-slate-900",
-  16: "bg-orange-400 text-white", 32: "bg-orange-500 text-white", 64: "bg-red-500 text-white", 128: "bg-yellow-400 text-slate-900",
-  256: "bg-yellow-500 text-slate-900", 512: "bg-lime-500 text-slate-900", 1024: "bg-emerald-500 text-white", 2048: "bg-sky-500 text-white",
+  0: "bg-gray-100", 2: "bg-amber-100 text-gray-800", 4: "bg-amber-200 text-gray-800", 8: "bg-orange-300 text-gray-900",
+  16: "bg-orange-400 text-white", 32: "bg-orange-500 text-white", 64: "bg-red-500 text-white", 128: "bg-yellow-400 text-gray-900",
+  256: "bg-yellow-500 text-gray-900", 512: "bg-lime-500 text-gray-900", 1024: "bg-emerald-500 text-white", 2048: "bg-sky-500 text-white",
 };
 
 export default function Client() {
@@ -45,7 +45,7 @@ export default function Client() {
         <button className={btn} onClick={restart}>最初から</button>
       </div>
       <div
-        className="relative grid touch-none grid-cols-4 gap-2 rounded-xl bg-slate-800 p-2"
+        className="relative grid touch-none grid-cols-4 gap-2 rounded-xl bg-gray-200 p-2"
         onTouchStart={(e) => { const t = e.touches[0]; touch.current = [t.clientX, t.clientY]; }}
         onTouchEnd={(e) => {
           if (!touch.current) return;
@@ -62,13 +62,13 @@ export default function Client() {
           </div>
         ))}
         {over && (
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 rounded-xl bg-slate-900/80">
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 rounded-xl bg-white/85">
             <div className="text-2xl font-bold">ゲームオーバー</div>
             <button className={btn} onClick={restart}>もう一度</button>
           </div>
         )}
       </div>
-      <p className="mt-3 text-xs text-slate-500">PC は矢印キー、スマホはスワイプで操作します。</p>
+      <p className="mt-3 text-xs text-gray-500">PC は矢印キー、スマホはスワイプで操作します。</p>
     </div>
   );
 }

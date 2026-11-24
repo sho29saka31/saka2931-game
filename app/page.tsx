@@ -3,18 +3,22 @@ import { games } from "./games";
 
 export default function Home() {
   return (
-    <>
-      <h1 className="text-3xl font-bold">Saka Games</h1>
-      <p className="mt-2 text-slate-400">登録不要・無料。ブラウザですぐ遊べるミニゲーム集です。</p>
-      <div className="mt-8 grid gap-4 sm:grid-cols-2">
-        {games.map((g) => (
-          <Link key={g.slug} href={`/${g.slug}`} className="rounded-xl border border-slate-700 bg-slate-800 p-5 transition hover:border-slate-400">
-            <div className="text-3xl">{g.icon}</div>
-            <h2 className="mt-2 font-semibold">{g.name}</h2>
-            <p className="mt-1 text-sm text-slate-400">{g.description}</p>
-          </Link>
-        ))}
-      </div>
-    </>
+    <main className="mx-auto max-w-3xl px-6 py-16">
+      <h1 className="text-2xl font-bold text-gray-900">Saka Games</h1>
+      <p className="mt-3 text-sm leading-relaxed text-gray-600">
+        登録不要・無料で遊べるミニゲーム集です。ハイスコアはお使いのブラウザ内にのみ保存されます。
+      </p>
+      <section className="mt-10">
+        <h2 className="text-sm font-semibold uppercase tracking-wide text-gray-500">ゲーム一覧</h2>
+        <div className="mt-3 space-y-3">
+          {games.map((g) => (
+            <Link key={g.slug} href={`/${g.slug}`} className="block rounded-lg border border-gray-200 bg-white p-4 transition hover:border-gray-300 hover:shadow-xs">
+              <p className="font-medium text-gray-900">{g.name}</p>
+              <p className="mt-1 text-sm text-gray-500">{g.description}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+    </main>
   );
 }

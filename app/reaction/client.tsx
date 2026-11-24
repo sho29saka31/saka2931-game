@@ -27,18 +27,18 @@ export default function Client() {
   };
 
   const view: Record<Phase, { bg: string; text: string }> = {
-    idle: { bg: "bg-indigo-600", text: "クリックでスタート" },
+    idle: { bg: "bg-gray-800", text: "クリックでスタート" },
     waiting: { bg: "bg-red-600", text: "緑になるまで待って…" },
     go: { bg: "bg-green-500", text: "今！クリック！" },
-    early: { bg: "bg-slate-600", text: "早すぎました。クリックでやり直し" },
-    result: { bg: "bg-indigo-600", text: `${ms} ms — クリックでもう一度` },
+    early: { bg: "bg-gray-500", text: "早すぎました。クリックでやり直し" },
+    result: { bg: "bg-gray-800", text: `${ms} ms — クリックでもう一度` },
   };
   return (
     <>
-      <button onClick={click} className={`flex h-64 w-full select-none items-center justify-center rounded-xl text-xl font-bold ${view[phase].bg}`}>
+      <button onClick={click} className={`flex h-64 w-full select-none items-center justify-center rounded-xl text-xl font-bold text-white ${view[phase].bg}`}>
         {view[phase].text}
       </button>
-      <p className="mt-3 text-sm text-slate-400">自己ベスト: <b>{best === null ? "-" : `${best} ms`}</b></p>
+      <p className="mt-3 text-sm text-gray-500">自己ベスト: <b>{best === null ? "-" : `${best} ms`}</b></p>
     </>
   );
 }
