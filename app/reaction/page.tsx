@@ -1,8 +1,11 @@
-import type { Metadata } from "next";
 import { GameShell } from "../components/GameShell";
+import { games } from "../games";
+import { itemMetadata } from "../lib/seo";
 import Client from "./client";
 
-export const metadata: Metadata = { title: "反応速度テスト" };
+const item = games.find((i) => i.slug === "reaction")!;
+export const metadata = itemMetadata(item);
+
 export default function Page() {
   return <GameShell slug="reaction"><Client /></GameShell>;
 }

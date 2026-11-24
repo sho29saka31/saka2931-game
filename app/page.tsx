@@ -1,5 +1,8 @@
 import Link from "next/link";
+import { pageMetadata } from "./lib/seo";
 import { games } from "./games";
+
+export const metadata = pageMetadata({ title: "ゲーム一覧", description: "登録不要・無料で遊べるミニゲーム集。ハイスコアはブラウザ内にのみ保存されます。", path: "/" });
 
 export default function Home() {
   return (
