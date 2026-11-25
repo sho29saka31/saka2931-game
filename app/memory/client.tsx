@@ -54,13 +54,13 @@ export default function Client() {
           const shown = open.includes(i) || matched.has(i);
           return (
             <button key={c.id} onClick={() => flip(i)} aria-label={shown ? c.icon : "裏向きのカード"}
-              className={`flex aspect-square items-center justify-center rounded-lg text-3xl transition ${shown ? "bg-gray-100 border border-gray-300" : "bg-gray-800 hover:bg-gray-700"} ${matched.has(i) ? "opacity-50" : ""}`}>
+              className={`flex aspect-square items-center justify-center rounded-md text-3xl transition ${shown ? "bg-gray-100 border border-gray-300" : "bg-gray-800 hover:bg-gray-700"} ${matched.has(i) ? "opacity-50" : ""}`}>
               {shown ? c.icon : ""}
             </button>
           );
         })}
       </div>
-      {finished && <p className="mt-4 text-center text-lg font-bold">クリア！ {moves} 手でした 🎉</p>}
+      {finished && <p className="mt-4 text-center text-lg font-bold">クリア。{moves} 手でした</p>}
     </div>
   );
 }

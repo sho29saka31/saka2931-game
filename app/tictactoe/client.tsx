@@ -50,7 +50,7 @@ export default function Client() {
       <p className="mb-3 text-sm text-gray-600">あなたは ✕(先攻)。 {score.win}勝 {score.draw}分 {score.lose}敗</p>
       <div className="grid grid-cols-3 gap-2">
         {b.map((v, i) => (
-          <button key={i} onClick={() => click(i)} aria-label={`マス ${i + 1}`} className="flex aspect-square items-center justify-center rounded-lg border border-gray-300 bg-gray-50 text-4xl font-bold hover:bg-gray-100">
+          <button key={i} onClick={() => click(i)} aria-label={`マス ${i + 1}`} className="flex aspect-square items-center justify-center rounded-md border border-gray-300 bg-gray-50 text-4xl font-bold hover:bg-gray-100">
             {v === "X" ? "✕" : v === "O" ? "○" : ""}
           </button>
         ))}

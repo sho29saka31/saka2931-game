@@ -27,7 +27,7 @@ export default function Client() {
       <p className="h-8 text-xl font-bold">{last ? { win: "勝ち！", lose: "負け…", draw: "あいこ" }[last.r] : ""}</p>
       <div className="mt-2 flex justify-center gap-3">
         {HANDS.map(([name, icon], i) => (
-          <button key={name} onClick={() => play(i)} className="rounded-lg border border-gray-300 px-4 py-3 text-sm font-medium hover:bg-gray-50"><span className="block text-3xl">{icon}</span>{name}</button>
+          <button key={name} onClick={() => play(i)} className="rounded-md border border-gray-300 px-4 py-3 text-sm font-medium hover:bg-gray-50"><span className="block text-3xl">{icon}</span>{name}</button>
         ))}
       </div>
     </div>

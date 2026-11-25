@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+  --color-accent: #c2410c;
+}
+
 @layer base {
   *,
   ::after,

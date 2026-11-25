@@ -47,7 +47,7 @@ export default function Client() {
       <div className="grid grid-cols-4 gap-1.5">
         {tiles.map((v, i) => (
           <button key={i} onClick={() => click(i)} disabled={v === 0} aria-label={v ? `タイル ${v}` : "空きマス"}
-            className={`aspect-square rounded-lg text-xl font-bold ${v ? "bg-gray-800 text-white hover:bg-gray-700" : "bg-gray-100"}`}>{v || ""}</button>
+            className={`aspect-square rounded-md text-xl font-bold ${v ? "bg-gray-800 text-white hover:bg-gray-700" : "bg-gray-100"}`}>{v || ""}</button>
         ))}
       </div>
       {won && <p className="mt-4 text-center text-lg font-bold">クリア！ {moves} 手でした</p>}

@@ -33,11 +33,11 @@ export default function Client() {
         <div>正解 <b className="text-lg">{score}</b> / ミス {miss} / ベスト <b>{best ?? 0}</b></div>
         <div>残り <b className="text-lg">{phase === "idle" ? 30 : left}</b> 秒</div>
       </div>
-      <div className="rounded-lg border border-gray-200 bg-gray-50 py-8 text-center text-5xl font-bold" style={{ color: phase === "play" ? COLORS[q.ink].css : "#111827" }}>
+      <div className="rounded-md border border-gray-200 bg-gray-50 py-8 text-center text-5xl font-bold" style={{ color: phase === "play" ? COLORS[q.ink].css : "#111827" }}>
         {phase === "play" ? COLORS[q.word].name : phase === "over" ? "終了！" : "準備はOK？"}
       </div>
       <div className="mt-3 grid grid-cols-4 gap-2">
-        {COLORS.map((c, i) => <button key={c.name} onClick={() => answer(i)} disabled={phase !== "play"} className="rounded-lg border border-gray-300 py-3 text-sm font-bold hover:bg-gray-50 disabled:opacity-50">{c.name}</button>)}
+        {COLORS.map((c, i) => <button key={c.name} onClick={() => answer(i)} disabled={phase !== "play"} className="rounded-md border border-gray-300 py-3 text-sm font-bold hover:bg-gray-50 disabled:opacity-50">{c.name}</button>)}
       </div>
       {phase !== "play" && <button className={`${btn} mt-4`} onClick={begin}>{phase === "over" ? `${score} 問正解！もう一度` : "スタート"}</button>}
     </div>

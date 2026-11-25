@@ -12,7 +12,7 @@ export function SiteHeader() {
             運営者情報
           </a>
           <a href="https://tool.saka2931.jp" className="hover:text-gray-900">
-            ツール
+            tool
           </a>
         </nav>
       </div>

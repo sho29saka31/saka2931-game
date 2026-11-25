@@ -10,7 +10,7 @@ const GTM_CONTAINER_ID = process.env.NEXT_PUBLIC_GTM_CONTAINER_ID;
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: { default: `${SITE_NAME} | saka2931.jp`, template: `%s | ${SITE_NAME}` },
-  description: "登録不要・無料で遊べるミニゲーム集。2048、神経衰弱、スネーク、マインスイーパ、タイピングなど、ブラウザですぐ遊べます。ハイスコアはブラウザ内にのみ保存されます。",
+  description: "2048、神経衰弱、スネーク、マインスイーパ、タイピングなど、ひと休みに遊べる小さなブラウザゲーム集。記録は、お使いのブラウザにだけ保存されます。",
   keywords: ["無料ゲーム", "ブラウザゲーム", "ミニゲーム", "2048", "神経衰弱", "スネーク", "マインスイーパ", "タイピング"],
   applicationName: SITE_NAME,
   authors: [{ name: "Shoki" }],

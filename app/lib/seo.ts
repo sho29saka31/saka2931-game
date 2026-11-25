@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 /** 本番の正規URL。canonical・sitemap・robots はすべてここを基準にする */
 export const BASE_URL = "https://game.saka2931.jp";
-export const SITE_NAME = "Saka Games";
+export const SITE_NAME = "game";
 const OG_IMAGE = "/opengraph-image";
 
 /**

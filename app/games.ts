@@ -1,18 +1,25 @@
-export type Game = { slug: string; name: string; description: string; icon: string };
+export type Game = { slug: string; name: string; description: string; category: string };
+
+export const categories = [
+  { id: "puzzle", name: "パズル" },
+  { id: "brain", name: "頭を使う" },
+  { id: "speed", name: "反射・スピード" },
+  { id: "play", name: "ひと息つく" },
+];
 
 export const games: Game[] = [
-  { slug: "g2048", name: "2048", description: "同じ数字を合わせて 2048 を目指す定番パズル(矢印キー/スワイプ)", icon: "🔢" },
-  { slug: "memory", name: "神経衰弱", description: "絵柄のペアを最少手数で揃えよう", icon: "🃏" },
-  { slug: "reaction", name: "反応速度テスト", description: "画面が変わった瞬間にクリック。あなたの反応は何ミリ秒？", icon: "⚡" },
-  { slug: "tictactoe", name: "三目並べ", description: "CPU と対戦する〇×ゲーム。CPU は強いので引き分けを狙おう", icon: "" },
-  { slug: "snake", name: "スネーク", description: "エサを食べて伸びるヘビを操作。壁や自分にぶつからないように", icon: "" },
-  { slug: "guess", name: "数当て", description: "1〜100 の秘密の数字を、ヒントを頼りに最少回数で当てよう", icon: "" },
-  { slug: "mines", name: "マインスイーパ", description: "9×9 のマスから地雷を避けて全てのマスを開こう", icon: "" },
-  { slug: "slide", name: "スライドパズル", description: "1〜15 のタイルを動かして順番に並べる15パズル。最少手数に挑戦", icon: "" },
-  { slug: "lights", name: "ライトアウト", description: "5×5 の明かりをすべて消そう。押したマスと上下左右が反転します", icon: "" },
-  { slug: "math", name: "暗算チャレンジ", description: "60秒間で何問解ける？ 足し算・引き算・かけ算のスピード暗算", icon: "" },
-  { slug: "whack", name: "もぐらたたき", description: "穴から顔を出すもぐらを30秒間でできるだけ多くたたこう", icon: "" },
-  { slug: "typing", name: "タイピング", description: "英単語を60秒間でいくつ打てるかに挑戦。キーボード練習にも", icon: "" },
-  { slug: "janken", name: "じゃんけん", description: "CPU とじゃんけん。連勝記録を伸ばそう", icon: "" },
-  { slug: "color", name: "色当てチャレンジ", description: "文字の「意味」ではなく「色」を答える反射テスト(ストループ課題)", icon: "" },
+  { slug: "g2048", category: "puzzle", name: "2048", description: "同じ数字をぶつけて合わせ、2048を作る" },
+  { slug: "slide", category: "puzzle", name: "スライドパズル", description: "1から15のタイルを動かして順番に並べる" },
+  { slug: "lights", category: "puzzle", name: "ライトアウト", description: "5×5の明かりを全部消す。押すと上下左右も反転する" },
+  { slug: "mines", category: "puzzle", name: "マインスイーパ", description: "地雷を避けて、9×9のマスを全部開く" },
+  { slug: "memory", category: "brain", name: "神経衰弱", description: "絵柄のペアを少ない手数で揃える" },
+  { slug: "math", category: "brain", name: "暗算チャレンジ", description: "60秒でいくつ解けるか。足し算、引き算、かけ算" },
+  { slug: "guess", category: "brain", name: "数当て", description: "1から100の数字を、ヒントを頼りに当てる" },
+  { slug: "tictactoe", category: "brain", name: "三目並べ", description: "CPUと対戦。かなり強いので、引き分けが目標" },
+  { slug: "reaction", category: "speed", name: "反応速度テスト", description: "色が変わった瞬間にクリックして、ミリ秒で測る" },
+  { slug: "whack", category: "speed", name: "もぐらたたき", description: "出てきたもぐらを30秒でできるだけたたく" },
+  { slug: "color", category: "speed", name: "色当てチャレンジ", description: "文字の意味ではなく、文字の色を答える" },
+  { slug: "typing", category: "speed", name: "タイピング", description: "英単語を60秒でいくつ打てるか" },
+  { slug: "snake", category: "play", name: "スネーク", description: "エサを食べて伸びるヘビを操作する" },
+  { slug: "janken", category: "play", name: "じゃんけん", description: "CPUと勝負して、連勝記録をのばす" },
 ];

@@ -27,7 +27,7 @@ export default function Client() {
     <div className="mx-auto max-w-sm">
       <p className="mb-3 text-sm">回数 <b className="text-lg">{log.length}</b> / ベスト <b>{best ?? "-"}</b> 回</p>
       <form onSubmit={submitGuess} className="flex gap-2">
-        <input type="number" min={1} max={100} inputMode="numeric" value={value} onChange={(e) => setValue(e.target.value)} disabled={won} placeholder="1〜100" className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm" />
+        <input type="number" min={1} max={100} inputMode="numeric" value={value} onChange={(e) => setValue(e.target.value)} disabled={won} placeholder="1〜100" className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm" />
         <button className={btn} disabled={won}>予想</button>
       </form>
       <ul className="mt-4 space-y-1 text-sm">

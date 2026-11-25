@@ -57,7 +57,7 @@ export default function Client() {
         }}
       >
         {(board ?? Array.from({ length: 4 }, () => Array(4).fill(0))).flat().map((v, i) => (
-          <div key={i} className={`flex aspect-square items-center justify-center rounded-lg text-2xl font-bold ${COLORS[v] ?? "bg-fuchsia-600 text-white"}`}>
+          <div key={i} className={`flex aspect-square items-center justify-center rounded-md text-2xl font-bold ${COLORS[v] ?? "bg-fuchsia-600 text-white"}`}>
             {v || ""}
           </div>
         ))}

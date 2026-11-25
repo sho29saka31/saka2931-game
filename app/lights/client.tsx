@@ -37,7 +37,7 @@ export default function Client() {
         {b.map((on, i) => (
           <button key={i} aria-label={`マス ${i + 1} ${on ? "点灯" : "消灯"}`} aria-pressed={on}
             onClick={() => { if (!won) { setB(press(b, i)); setMoves((m) => m + 1); } }}
-            className={`aspect-square rounded-lg border ${on ? "border-amber-500 bg-amber-300" : "border-gray-300 bg-gray-800"}`} />
+            className={`aspect-square rounded-md border ${on ? "border-amber-500 bg-amber-300" : "border-gray-300 bg-gray-800"}`} />
         ))}
       </div>
       {won && <p className="mt-4 text-center text-lg font-bold">全部消せた！ {moves} 手でした</p>}

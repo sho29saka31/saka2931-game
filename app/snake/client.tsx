@@ -71,7 +71,7 @@ export default function Client() {
         <div>スコア <b className="text-lg">{score}</b> / ベスト <b>{best ?? 0}</b></div>
         <button className={btn} onClick={start}>{phase === "play" ? "最初から" : phase === "over" ? "もう一度" : "スタート"}</button>
       </div>
-      <canvas ref={canvas} width={N * CELL} height={N * CELL} className="rounded-lg border border-gray-300" />
+      <canvas ref={canvas} width={N * CELL} height={N * CELL} className="rounded-md border border-gray-300" />
       {phase === "over" && <p className="mt-2 font-bold">ゲームオーバー</p>}
       <div className="mt-4 grid grid-cols-3 gap-2 text-center sm:hidden">
         <span /><button className={btn} onClick={() => turn("up")}>↑</button><span />
